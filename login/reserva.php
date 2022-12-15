@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 
 <!DOCTYPE html>
@@ -18,22 +19,42 @@ session_start();
         <a class="links" id="paralogin"></a>
 
         <?php
+        error_reporting(0);
         if ($_SESSION['user_create']):
-        ?>
+            ?>
 
-        <div class="alt-box">
-            <p>Cadastro efetuado!</p>
-            <p>Realize o login <a href="#paralogin">Clique aqui</a></p>
-        </div>
+            <div >
+                <p>Cadastro efetuado!</p>
+                <p>Realize o login <a href="#paralogin">Clique aqui</a></p>
+            </div>
 
         <?php
         endif;
         unset($_SESSION['user_create'])
         ?>
 
+<!--        ########################################-->
+
+        <?php
+        error_reporting(0);
+        if ($_SESSION['user_error']):
+            ?>
+
+            <div >
+                <p>Email Ou/e Senha incorreto(s)!</p>
+                <p>tente novamente</p>
+            </div>
+
+        <?php
+        endif;
+        unset($_SESSION['user_error'])
+        ?>
+
+
 <!--        #########################################-->
 
         <?php
+        error_reporting(0);
         if ($_SESSION['user_existed']):
             ?>
 
@@ -54,7 +75,7 @@ session_start();
         <div class="content">      
   
           <div id="login">
-            <form method="post" action=""> 
+            <form method="post" action="acessAccount.php">
               <h1>Login</h1> 
               <p> 
                 <label for="email_login">Seu e-mail</label>

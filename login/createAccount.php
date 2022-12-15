@@ -21,6 +21,28 @@ $sql = "INSERT INTO user (email, senha, nome, data_cadastro) VALUES ('$user_emai
 
 
 if($mycon->query($sql) === TRUE) {
+
+    $message = "
+    <html>
+    <head>
+    <title>HTML email</title>
+    </head>
+    <body style='font-family: Arial, Helvetica, sans-serif;'>
+    <h1><td>Olá $user_name </td></h1><br>
+    <h3>Seu cadastro foi realizado com sucesso:</h3><br>
+    <a href='http://localhost/LTP/login/reserva.php#paralogin'>Realizar login.</a>
+    </body>
+    </html>
+    ";
+
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+    $headers .= 'From: <swlobr@gmail.com>' . "\r\n";
+    $headers .= 'Cc: joao.victor@estudante.ifgoiano.edu.br' . "\r\n";
+
+    mail($user_email,"Cadastro Realizado",$message,$headers);
+
     $_SESSION['user_create'] = true;
 }
 
