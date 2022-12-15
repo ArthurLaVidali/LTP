@@ -50,7 +50,7 @@ Também é necessário executar os seguintes comandos no Banco de dados:<br>
 You need to use PHP 8.1 and MariaDB/MySQL, we used XAMPP which already has these tools.
 You also need to run the following commands on the Database:<br>
 
-- CREATE DATABASE<br>
+- CREATE DATABASE
 - CREATE TABLE user (<br>
   id int NOT NULL AUTO_INCREMENT,<br>
   email varchar(40) NOT NULL,<br>
