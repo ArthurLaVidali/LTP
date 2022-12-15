@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,13 +12,45 @@
 </head>
 <link rel="stylesheet" href="login.css">
 
-
-
 <body>
     <div class="container" >
         <a class="links" id="paracadastro"></a>
         <a class="links" id="paralogin"></a>
-        
+
+        <?php
+        if ($_SESSION['user_create']):
+        ?>
+
+        <div class="alt-box">
+            <p>Cadastro efetuado!</p>
+            <p>Realize o login <a href="#paralogin">Clique aqui</a></p>
+        </div>
+
+        <?php
+        endif;
+        unset($_SESSION['user_create'])
+        ?>
+
+<!--        #########################################-->
+
+        <?php
+        if ($_SESSION['user_existed']):
+            ?>
+
+            <div class="alert-box">
+                <p>Email já está em uso!</p>
+                <p>Tente usar outro email para realizar o cadastro.</p>
+            </div>
+
+        <?php
+        endif;
+        unset($_SESSION['user_existed'])
+        ?>
+
+
+
+
+
         <div class="content">      
   
           <div id="login">
@@ -46,8 +82,12 @@
             </form>
           </div>
 
+
+          #######################################
+
+
           <div id="cadastro">
-            <form method="post" action=""> 
+            <form method="post" action="createAccount.php">
               <h1>Cadastro</h1> 
               
               <p> 
