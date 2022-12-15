@@ -35,34 +35,51 @@ This repository is a reference to the evaluation site of the Languages ​​and
 Você precisa usar o PHP 8.1 e MariaDB/MySQL, foi utilizado o XAMPP que já possui essas ferramentas.
 Também é necessário executar os seguintes comandos no Banco de dados:<br>
 
-- CREATE DATABASE<br>
-- CREATE TABLE user (<br>
-  id int NOT NULL AUTO_INCREMENT,<br>
-  email varchar(40) NOT NULL,<br>
-  senha varchar(40) NOT NULL,<br>
-  nome varchar(32) NOT NULL,<br>
-  data_cadastro DATETIME NOT NULL,<br>
-  PRIMARY KEY (id)<br>
-  );
-  
+### Comandos para criação da tabela no Banco de dados
+
+```
+CREATE DATABASE<br>
+```
+```
+CREATE TABLE user (<br>
+id int NOT NULL AUTO_INCREMENT,<br>
+email varchar(40) NOT NULL,<br>
+senha varchar(40) NOT NULL,<br>
+nome varchar(32) NOT NULL,<br>
+data_cadastro DATETIME NOT NULL,<br>
+PRIMARY KEY (id)<br>
+);
+```  
 <br>
   
 You need to use PHP 8.1 and MariaDB/MySQL, we used XAMPP which already has these tools.
-You also need to run the following commands on the Database:<br>
+You also need to run the following commands on the Database:
 
-- CREATE DATABASE
-- CREATE TABLE user (<br>
-  id int NOT NULL AUTO_INCREMENT,<br>
-  email varchar(40) NOT NULL,<br>
-  senha varchar(40) NOT NULL,<br>
-  nome varchar(32) NOT NULL,<br>
-  data_cadastro DATETIME NOT NULL,<br>
-  PRIMARY KEY (id)<br>
-  );
-  
+### Commands for create a table on Data Base
+
+```
+CREATE DATABASE<br>
+```
+```
+CREATE TABLE user (<br>
+id int NOT NULL AUTO_INCREMENT,<br>
+email varchar(40) NOT NULL,<br>
+senha varchar(40) NOT NULL,<br>
+nome varchar(32) NOT NULL,<br>
+data_cadastro DATETIME NOT NULL,<br>
+PRIMARY KEY (id)<br>
+);
+```  
   <br>
 
  <a href="https://xampp-windows.softonic.com.br/?utm_source=SEM&utm_medium=paid&utm_campaign=EN_PT_Brazil_DSA&gclid=Cj0KCQiAqOucBhDrARIsAPCQL1a86mtA3Pfw2gpcY4EbezW9RqMi0ZiobFIIX4TG0AglI-IwWH1ccwEaAqteEALw_wcB">Install XAAMP</a>
+ 
+ ## 👥 Membros/Members
+ 
+ - Pedro Paulo Soares Rabelo
+ - João Victor Godoi
+ - Pedro Naves Cavalcanti
+ - Arthur Rodrigues Castilho
 
  
 
