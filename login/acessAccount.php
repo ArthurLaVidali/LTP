@@ -25,10 +25,12 @@ if(mysqli_num_rows($result) > 0) {
     $alguma = mysqli_fetch_assoc($result);
     $_SESSION['nome'] = $alguma['nome'];
     $_SESSION['user_email'] = $user_email;
+    $mycon->close();
     header('Location: panel.php');
     exit();
 } else {
     $_SESSION['user_error'] = true;
+    $mycon->close();
     header('Location: reserva.php');
     exit();
 }
